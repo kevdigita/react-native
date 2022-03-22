@@ -2,6 +2,7 @@ import { useNavigation } from "@react-navigation/native";
 import { createNativeStackNavigator, NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React from "react";
 import {ScrollView, View,Text, FontVariant } from "react-native";
+import tailwind from "tailwind-rn";
  import {Button} from "~/component/Button"
 
 
@@ -24,9 +25,9 @@ const press=(vrai:String,click:String)=>
 }
 
 return(
-    <View>
-<ScrollView>
-<Text>{QUESTION[1].QUESTION}
+    <View style={tailwind("text-center text-justify bg-black font-bold h-full w-full")}>
+<ScrollView style={tailwind("text-center mt-10 bg-white")}>
+<Text style={tailwind("text-center mt-10 mb-10 bg-white font-bold")}>{QUESTION[1].QUESTION}
 </Text>
 </ScrollView>
 

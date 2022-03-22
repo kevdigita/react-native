@@ -20,11 +20,11 @@ return(
 <View 
  style={tailwind(
     `px-4 py-2 mt-2 rounded-sm  ${
-      type === "BEGIN" ? "bg-primary" : "bg-white text-center text-primary"
+      type === "BEGIN" ? "bg-red-800 py-2 px-1 mt-5 mb-0 " : "mt-5 mb-2 py-3 bg-black text-center bg-red-400"
     }`
   )}
 >
-<Text>
+<Text style={tailwind("text-center text-white font-bold text-xl" )}>
    {children}
 </Text>
 

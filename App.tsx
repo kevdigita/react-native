@@ -8,7 +8,7 @@ export default function App() {
   return (
 <NavigationContainer>
  <Rootnavigator/>
-<StatusBar style="inverted" />
+<StatusBar style="dark" />
 </NavigationContainer>
 
   );
