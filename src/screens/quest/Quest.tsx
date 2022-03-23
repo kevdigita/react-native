@@ -1,43 +1,53 @@
 import { useNavigation } from "@react-navigation/native";
-import { createNativeStackNavigator, NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React from "react";
-import {ScrollView, View,Text, FontVariant } from "react-native";
+import {ScrollView, View,Text, FontVariant, ImageBackground } from "react-native";
 import tailwind from "tailwind-rn";
  import {Button} from "~/component/Button"
 
-
-
-import {QuProps,Questi,QUESTION} from "~/component/data"
+import {QuProps,QUESTION} from "~/component/data"
 import { RoutParams } from "~/navigator/Rootnavigator";
 
-export const Quest: React.FunctionComponent<QuProps>=({
+ var nbq=0
+export const Quest: React.FunctionComponent<QuProps>=({})=>
+{   
+ nbq = Math.floor( Math.random()*(133-1))+1;
+    nbq-1
+const navigation=useNavigation<NativeStackNavigationProp<RoutParams>>();  
 
-    
-})=>
-{
-const navigation=useNavigation<NativeStackNavigationProp<RoutParams>>();    
+
+
 const press=(vrai:String,click:String)=>
+
 {
-
-    navigation.navigate("Val",{
-        rest:false
-    })
+   if(vrai==click)
+    {
+        navigation.navigate("Val")
+    }
+    else{
+    navigation.navigate("Erre")
+    }
 }
-
+ 
 return(
-    <View style={tailwind("text-center text-justify bg-black font-bold h-full w-full")}>
+    <View style={tailwind("text-center text-justify  bg-black font-bold h-full w-full")}>
+
+       
+       <Text style={tailwind("text-center bg-pink-200 text-4xl font-bold ")}>{QUESTION[nbq].MANGA }</Text>
+     
 <ScrollView style={tailwind("text-center mt-10 bg-white")}>
-<Text style={tailwind("text-center mt-10 mb-10 bg-white font-bold")}>{QUESTION[1].QUESTION}
+<Text style={tailwind("text-center mt-10 mb-10 bg-white text-xl font-bold")}>{QUESTION[nbq].QUESTION }
 </Text>
+
 </ScrollView>
 
-<Button type="validate" onPress={()=>press(QUESTION[1].CORRECT,QUESTION[1].REP) }> { QUESTION[1].REP } </Button>
+<Button type="validate" onPress={()=>press(QUESTION[nbq].CORRECT,QUESTION[nbq].REP) }> { QUESTION[nbq].REP } </Button>
 
-<Button type="validate" onPress={()=>press(QUESTION[1].CORRECT,QUESTION[1].CORRECT) }> { QUESTION[1].CORRECT } </Button>
+<Button type="validate" onPress={()=>press(QUESTION[nbq].CORRECT,QUESTION[nbq].CORRECT) }> { QUESTION[nbq].CORRECT } </Button>
 
-<Button type="validate" onPress={()=>press(QUESTION[1].CORRECT,QUESTION[1].REPONSE) }> { QUESTION[1].REPONSE } </Button>
+<Button type="validate" onPress={()=>press(QUESTION[nbq].CORRECT,QUESTION[nbq].REPONSE) }> { QUESTION[nbq].REPONSE } </Button>
 
-<Button type="validate" onPress={()=>press(QUESTION[1].CORRECT,QUESTION[1].REPON) }> { QUESTION[1].REPON } </Button>
+<Button type="validate" onPress={()=>press(QUESTION[nbq].CORRECT,QUESTION[nbq].REPON) }> { QUESTION[nbq].REPON } </Button>
 
 </View>
 )

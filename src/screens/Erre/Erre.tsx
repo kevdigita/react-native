@@ -5,22 +5,28 @@ import React from "react";
 import { View ,Text} from "react-native";
 import { RoutParams } from "~/navigator/Rootnavigator";
 
-  
-interface ValProps{}
 
-export const Val: React.FunctionComponent<ValProps>=({})=>
+interface ErreProps{}
+
+export const Erre: React.FunctionComponent<ErreProps>=({})=>
 {
 
 
 const navigation=useNavigation<NativeStackNavigationProp<RoutParams>>();  
 
+const go=()=>
+{ 
+    
+    
+        navigation.navigate("Quest")   
 
+}
 
 
 
 return(
-<View> 
-  <Text onPress={ ()=> navigation.navigate("Quest")   }>
+<View>
+   <Text onPress={go} >
     juste
   </Text>
 </View>
