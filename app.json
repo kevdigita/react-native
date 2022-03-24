@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "react-navigation-tutorial",
-    "slug": "react-navigation-tutorial",
+    "name": "QUIZZ OTAKU",
+    "slug": "QUESTION REPONSE",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/loup.jpg",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/dragon.jpg",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "black"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -19,12 +19,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "./assets/dragon.jpg",
+        "backgroundColor": "black"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/loup.jpg"
     }
   }
 }
