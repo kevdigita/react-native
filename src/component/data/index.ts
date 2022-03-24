@@ -745,7 +745,7 @@ export interface QuProps{}
             id:"83",
             REPONSE:"3EME",
             REP:"10EME",
-            REPON:"1E",
+            REPON:"1ER",
             CORRECT:"5EME",
             MANGA:"attaque_des_titans"},
         {
@@ -1200,7 +1200,7 @@ export  type  Questi =
 {
 
 
-            QUESTION:String;
+          QUESTION:String;
             indice:String;
             id:String;
             REPONSE:String;
