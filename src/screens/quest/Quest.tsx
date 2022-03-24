@@ -28,15 +28,18 @@ const press=(vrai:String,click:String)=>
     navigation.navigate("Erre")
     }
 }
- 
+var nb = Math.floor( Math.random()*(4-1))+1;
+if (nb==1)
+{
+
 return(
     <View style={tailwind("text-center text-justify  bg-black font-bold h-full w-full")}>
 
        
        <Text style={tailwind("text-center bg-pink-200 text-4xl font-bold ")}>{QUESTION[nbq].MANGA }</Text>
      
-<ScrollView style={tailwind("text-center mt-10 bg-white")}>
-<Text style={tailwind("text-center mt-10 mb-10 bg-white text-xl font-bold")}>{QUESTION[nbq].QUESTION }
+<ScrollView style={tailwind("text-center  bg-white")}>
+<Text style={tailwind("text-center mt-1  bg-white text-xl font-bold")}>{QUESTION[nbq].QUESTION }
 </Text>
 
 </ScrollView>
@@ -51,7 +54,89 @@ return(
 
 </View>
 )
+    
+}
+if (nb==2)
+{
 
+return(
+    <View style={tailwind("text-center text-justify  bg-black font-bold h-full w-full")}>
+
+       
+       <Text style={tailwind("text-center bg-pink-200 text-4xl font-bold ")}>{QUESTION[nbq].MANGA }</Text>
+     
+<ScrollView style={tailwind("text-center  bg-white")}>
+<Text style={tailwind("text-center mt-1  bg-white text-xl font-bold")}>{QUESTION[nbq].QUESTION }
+</Text>
+
+</ScrollView>
+
+<Button type="validate" onPress={()=>press(QUESTION[nbq].CORRECT,QUESTION[nbq].CORRECT) }> { QUESTION[nbq].CORRECT } </Button>
+
+<Button type="validate" onPress={()=>press(QUESTION[nbq].CORRECT,QUESTION[nbq].REP) }> { QUESTION[nbq].REP } </Button>
+
+<Button type="validate" onPress={()=>press(QUESTION[nbq].CORRECT,QUESTION[nbq].REPONSE) }> { QUESTION[nbq].REPONSE } </Button>
+
+<Button type="validate" onPress={()=>press(QUESTION[nbq].CORRECT,QUESTION[nbq].REPON) }> { QUESTION[nbq].REPON } </Button>
+
+</View>
+)
+    
+}
+if (nb==3)
+{
+
+return(
+    <View style={tailwind("text-center text-justify  bg-black font-bold h-full w-full")}>
+
+       
+       <Text style={tailwind("text-center bg-pink-200 text-4xl font-bold ")}>{QUESTION[nbq].MANGA }</Text>
+     
+<ScrollView style={tailwind("text-center  bg-white")}>
+<Text style={tailwind("text-center mt-1  bg-white text-xl font-bold")}>{QUESTION[nbq].QUESTION }
+</Text>
+
+</ScrollView>
+
+<Button type="validate" onPress={()=>press(QUESTION[nbq].CORRECT,QUESTION[nbq].REP) }> { QUESTION[nbq].REP } </Button>
+
+<Button type="validate" onPress={()=>press(QUESTION[nbq].CORRECT,QUESTION[nbq].REPONSE) }> { QUESTION[nbq].REPONSE } </Button>
+
+<Button type="validate" onPress={()=>press(QUESTION[nbq].CORRECT,QUESTION[nbq].CORRECT) }> { QUESTION[nbq].CORRECT } </Button>
+
+<Button type="validate" onPress={()=>press(QUESTION[nbq].CORRECT,QUESTION[nbq].REPON) }> { QUESTION[nbq].REPON } </Button>
+
+</View>
+)
+    
+}
+if (nb==4)
+{
+
+return(
+    <View style={tailwind("text-center text-justify  bg-black font-bold h-full w-full")}>
+
+       
+       <Text style={tailwind("text-center bg-pink-200 text-4xl font-bold ")}>{QUESTION[nbq].MANGA }</Text>
+     
+<ScrollView style={tailwind("text-center  bg-white")}>
+<Text style={tailwind("text-center mt-1  bg-white text-xl font-bold")}>{QUESTION[nbq].QUESTION }
+</Text>
+
+</ScrollView> 
+
+<Button type="validate" onPress={()=>press(QUESTION[nbq].CORRECT,QUESTION[nbq].REP) }> { QUESTION[nbq].REP } </Button>
+
+<Button type="validate" onPress={()=>press(QUESTION[nbq].CORRECT,QUESTION[nbq].REPONSE) }> { QUESTION[nbq].REPONSE } </Button>
+
+<Button type="validate" onPress={()=>press(QUESTION[nbq].CORRECT,QUESTION[nbq].REPON) }> { QUESTION[nbq].REPON } </Button>
+
+<Button type="validate" onPress={()=>press(QUESTION[nbq].CORRECT,QUESTION[nbq].CORRECT) }> { QUESTION[nbq].CORRECT } </Button>
+
+</View>
+)
+    
+}
 
 } 
 
